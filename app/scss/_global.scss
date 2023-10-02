@@ -1,0 +1,23 @@
+body {
+    font-family: 'ChakraPetch';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    background-color: $black-100;
+    color: $white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.btn--unfill {
+    min-width: 126px;
+    padding: 12px 21px;
+    border-width: 1px;
+    border-style: solid;
+    border-image: linear-gradient(90deg, #0CBAF1, #E95CE9);
+    border-image-slice: 1;
+}

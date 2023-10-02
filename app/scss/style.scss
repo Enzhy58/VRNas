@@ -3,3 +3,61 @@
 @import 'reset';
 @import 'global';
 @import 'libs';
+
+
+.header {
+    padding: 31px 0;
+
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__list {
+            display: flex;
+            font-weight: 300;
+        }
+
+        &__item {
+
+            &:not(:last-child) {
+                margin-right: 64px;
+            }
+
+            &--more {
+                padding-right: 16px;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 12px;
+                    height: 12px;
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
+                    background-image: url("../images/icons/menu-more.svg");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                }
+
+                &:not(:last-child) {
+                    margin-right: 48px;
+                }
+
+            }
+
+        }
+
+        &__link {
+
+            &--active {
+                font-weight: 500;
+            }
+
+        }
+
+    }
+
+}
