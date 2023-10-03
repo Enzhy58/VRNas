@@ -14,10 +14,18 @@ body {
 }
 
 .btn--unfill {
-    min-width: 126px;
-    padding: 12px 21px;
     border-width: 1px;
     border-style: solid;
-    border-image: linear-gradient(90deg, #0CBAF1, #E95CE9);
+    border-image: linear-gradient(90deg, $liner-blue, $liner-pink);
     border-image-slice: 1;
+}
+
+.btn--fill {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, $liner-blue, $liner-pink);
 }
