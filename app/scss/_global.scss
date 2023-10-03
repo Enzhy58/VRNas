@@ -43,6 +43,11 @@ body {
 }
 
 .btn--unfill {
+    padding: 18px 38px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: #32323D;
     border-width: 1px;
     border-style: solid;
     border-image: linear-gradient(90deg, $liner-blue, $liner-pink);
