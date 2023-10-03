@@ -13,6 +13,35 @@ body {
     padding: 0 10px;
 }
 
+.video {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: 196px;
+    width: 100%;
+    height: 127px;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url("../images/icons/play.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+
+}
+
+.page-section {
+    margin-bottom: 150px;
+}
+
 .btn--unfill {
     border-width: 1px;
     border-style: solid;
@@ -22,10 +51,62 @@ body {
 
 .btn--fill {
     display: inline-block;
+    padding: 18px 38px;
     font-weight: 700;
     font-size: 14px;
     line-height: 14px;
     text-align: center;
     text-transform: uppercase;
     background: linear-gradient(90deg, $liner-blue, $liner-pink);
+}
+
+.title {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    background-image: linear-gradient(90deg, $liner-blue, $liner-pink);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    display: block;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 58px;
+    margin-bottom: 12px;
+}
+
+.style--img {
+    position: relative;
+
+    &::after,
+    &::before {
+        content: '';
+        position: absolute;
+    }
+
+    &::after {
+        width: 399px;
+        height: 497px;
+        left: -20px;
+        bottom: 0;
+        background-color: $black-50;
+        z-index: -2;
+    }
+
+    &::before {
+        width: 987px;
+        height: 760px;
+        left: -290px;
+        top: 0;
+        background-image: url("../images/decor/light.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        z-index: -1;
+    }
+
 }

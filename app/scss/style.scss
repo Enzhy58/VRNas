@@ -130,38 +130,12 @@
     }
 
     &__btn {
-        padding: 18px 38px;
         margin-bottom: 42px;
     }
 
     &__wrapper {
         display: flex;
         justify-content: space-between;
-    }
-
-    &__video {
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        max-width: 196px;
-        width: 100%;
-        height: 127px;
-        position: relative;
-
-        &::before {
-            content: '';
-            position: absolute;
-            width: 28px;
-            height: 28px;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-image: url("../images/icons/play.png");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
-        }
-
     }
 
 }
@@ -263,6 +237,66 @@
     &__text {
         font-size: 14px;
         color: $grey-1;
+    }
+
+}
+
+.about {
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__img {
+        margin-right: 80px;
+    }
+
+    &__video {
+        display: block;
+        position: absolute;
+        right: 90px;
+        bottom: -20px
+    }
+
+    &__content {
+        max-width: 562px;
+    }
+
+    &__text {
+        max-width: 528px;
+        font-weight: 300;
+        margin-bottom: 24px;
+        color: $grey-2;
+    }
+
+    &__list {
+        margin-bottom: 32px;
+    }
+
+    &__item {
+        padding-left: 28px;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-image: url("../images/icons/about.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 14px;
+        }
+
     }
 
 }
