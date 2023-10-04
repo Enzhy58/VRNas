@@ -13,3 +13,25 @@ $liner-blue: #0CBAF1;
     border-image-slice: 1;
     background-color: $black-50;
 }
+
+@mixin border-linear () {
+    border-width: 1px;
+    border-style: solid;
+    border-image: linear-gradient(90deg, $liner-blue, $liner-pink);
+    border-image-slice: 1;
+}
+
+@mixin light () {
+    content: '';
+    position: absolute;
+    width: 987px;
+    height: 760px;
+    background-image: url("../images/decor/light.png");
+    z-index: -1;
+}
+
+@mixin background-feature () {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}

@@ -1,4 +1,5 @@
 $(function () {
+    
     $('.accordion__header').on('click', function (e) {
         e.preventDefault();
         $('.accordion__header').removeClass('accordion__header--active');
