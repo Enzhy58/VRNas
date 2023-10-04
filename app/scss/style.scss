@@ -578,11 +578,119 @@
 
 
 .price {
+    position: relative;
+
+    &::before {
+        @include light ();
+        right: -5%;
+        top: 30%;
+        @include background-feature ();
+    }
 
     &__text {
-        margin-bottom: 40px;
         max-width: 625px;
-        color: $grey-2;
         font-weight: 300;
+        color: $grey-2;
+        margin-bottom: 40px;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        @include block ();
+        background-color: rgba($black-50, 0.8);
+    }
+
+    &__list {
+        padding: 55px 118px 55px 42px;
+        max-width: 758px;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 447px;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            background-color: rgba($white, 0.2);
+        }
+
+    }
+
+    &__item {
+        max-width: 630px;
+        padding-left: 58px;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 42px;
+            height: 42px;
+            top: 0;
+            left: 0;
+            background-image: url("../images/price/icon.svg");
+            @include background-feature ();
+        }
+
+    }
+
+    &__title {
+        font-size: 18px;
+        font-weight: 400;
+        margin-bottom: 12px;
+    }
+
+    &__text {
+        color: $grey-1;
+    }
+
+    &__img {
+        object-fit: contain;
+        align-self: flex-end;
+    }
+
+    &__box {
+        position: absolute;
+        bottom: -5%;
+        right: 25%;
+        padding: 20px 70px;
+        @include border-linear ();
+        background-color: $black-80;
+
+        span {
+            display: block;
+            text-align: center;
+        }
+
+    }
+
+    &__from {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        color: $grey-2;
+    }
+
+    &__num {
+        font-size: 60px;
+        font-weight: 600;
+        line-height: 66px;
+        margin-bottom: 14px;
+    }
+
+    &__btn {
+        display: block;
+        width: 182px;
+        height: 50px;
+        margin: 0 auto 14px auto;
+    }
+
+    &__guarantee {
+        color: $grey-1;
+        font-size: 12px;
+        line-height: 20px;
     }
 }

@@ -60,7 +60,7 @@ body {
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
-    background-color: #32323D;
+    background-color: $black-80;
     @include border-linear ();
 }
 
