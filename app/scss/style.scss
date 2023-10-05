@@ -762,3 +762,117 @@
     }
 
 }
+
+
+.footer {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 736px;
+        height: 354px;
+        left: -10px;
+        bottom: 0;
+        background-image: url("../images/decor/footer-bg.png");
+        @include background-feature ();
+        z-index: -1;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 33px;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-image: linear-gradient(90deg, $liner-blue, $liner-pink);
+        border-image-slice: 1;
+    }
+
+    &__box {
+
+        &:first-child {
+            display: flex;
+            flex-direction: column;
+        }
+
+    }
+
+    &__title {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 20px;
+        margin-bottom: 16px;
+    }
+
+    &__list {
+        font-weight: 300;
+    }
+
+    &__item {
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+
+    }
+
+    &__bottom {
+        font-weight: 300;
+        padding: 32px 0 40px 0;
+        text-align: center;
+    }
+
+}
+
+
+.social {
+    display: flex;
+    margin-top: auto;
+    
+    &__item {
+
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+
+    }
+
+}
+
+.contacts {
+
+    &__item {
+        padding-left: 28px;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            @include background-feature ();
+        }
+
+        &--location::before {
+            background-image: url("../images/icons/contacts/location.svg");
+        }
+
+        &--message::before {
+            background-image: url("../images/icons/contacts/message.svg");
+        }
+
+        &--phone::before {
+            background-image: url("../images/icons/contacts/phone.svg");
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+
+    }
+
+}
