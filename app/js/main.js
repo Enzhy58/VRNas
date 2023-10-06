@@ -9,4 +9,9 @@ $(function () {
         $($(this).attr('href')).addClass('accordion__body--active');
     });
 
+    $('.articles__popular-list').slick({
+        dots: true,
+        arrows: false
+    });
+
 });

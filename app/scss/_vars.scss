@@ -7,6 +7,11 @@ $grey-2: #D1D1D1;
 $liner-pink: #E95CE9;
 $liner-blue: #0CBAF1;
 
+@mixin text () {
+    font-weight: 300;
+    color: $grey-2;
+}
+
 @mixin block () {
     border-width: 1px;
     border-style: solid;
@@ -22,13 +27,19 @@ $liner-blue: #0CBAF1;
     border-image-slice: 1;
 }
 
-@mixin light () {
-    content: '';
-    position: absolute;
-    width: 987px;
-    height: 760px;
-    background-image: url("../images/decor/light.png");
-    z-index: -1;
+@mixin light ()  {
+        content: '';
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        width: 100%;
+        height: 50%;
+        background: linear-gradient(98.54deg,rgba(28,196,249,.8) .72%,rgba(254,105,254,.8) 90.69%);
+        -webkit-filter: blur(105px);
+        filter: blur(105px);
+        border-radius: 88% 12% 88% 12%/20% 37% 63% 80%;
+        transform: translate(-50%,-50%) rotate(-30deg);
+        z-index: -1;
 }
 
 @mixin background-feature () {
