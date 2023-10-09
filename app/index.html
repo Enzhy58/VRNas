@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VRNas</title>
+  <title>VRNas | Immerse Yourself in Virtual Reality</title>
   <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
@@ -46,13 +46,15 @@
 
         <div class="top__inner">
           <div class="top__content">
-            <h2 class="top__title">Immerse Yourself in Virtual Reality</h2>
+            <h1 class="top__title">Immerse Yourself in Virtual Reality</h1>
             <div class="top__text">
               <p>
                 Experience Unforgettable Events in VR. Bring your events to life like never before with our VR services
               </p>
             </div>
-            <a class="top__btn btn--color" href="#">discover more</a>
+            <a class="top__btn btn--color" href="#">
+              <span>discover more</span>
+            </a>
             <div class="top__wrapper">
               <div class="clients">
                 <div class="clients__inner">
@@ -61,17 +63,20 @@
                   <img class="clients__img" src="images/clients/3.png" width="51" height="51" alt="">
                 </div>
                 <div class="clients__text">
-                  <span>32k+ </span>
+                  <span>32k+</span>
                   Happy Client
                 </div>
               </div>
-              <a class="video" style="background-image: url(images/top/video.jpg);" data-fancybox="data-fancybox" href="https://youtu.be/8RbG8VOB288?si=IdZTuUAP2Hukrkxx">
-                <span class="sr-only">Video</span>
-              </a>
+              <div class="video">
+                <a class="video__link" style="background-image: url(images/top/video.jpg);" data-fancybox="data-fancybox" href="https://youtu.be/8RbG8VOB288?si=IdZTuUAP2Hukrkxx">
+                  <span class="sr-only">Video</span>
+                </a>
+              </div>
             </div>
           </div>
+
           <div class="top__box">
-            <img class="top__img" src="images/top/top-img.png" alt="">
+            <img class="top__img" src="images/top/top-img.png" width="526" height="626" alt="">
           </div>
         </div>
 
@@ -108,11 +113,13 @@
     <section class="about page-section">
       <div class="container">
         <div class="about__inner">
-          <div class="style--img">
-            <img class="about__img" width="517" height="622" src="images/about/about-img.png" alt="">
-            <a class=" about__video video" style="background-image: url(images/about/video.jpg);" data-fancybox="data-fancybox" href="https://youtu.be/8RbG8VOB288?si=IdZTuUAP2Hukrkxx">
-              <span class="sr-only">Video</span>
-            </a>
+          <div class="style-img">
+            <img class="about__img" src="images/about/about-img.png" width="517" height="622" alt="">
+            <div class="video about__video">
+              <a class="video__link" style="background-image: url(images/about/video.jpg);" data-fancybox="data-fancybox" href="https://youtu.be/8RbG8VOB288?si=IdZTuUAP2Hukrkxx">
+                <span class="sr-only">Video</span>
+              </a>
+            </div>
           </div>
           <div class="about__content">
             <h2 class="title">about us</h2>
@@ -127,7 +134,9 @@
               <li class="about__item">Versatile Applications</li>
               <li class="about__item">Affordable and Accessible</li>
             </ul>
-            <a class="about__btn btn--color" href="#">read more</a>
+            <a class="about__btn btn--color" href="#">
+              <span>read more</span>
+            </a>
           </div>
         </div>
       </div>
@@ -253,11 +262,13 @@
 
           </div>
 
-          <div class="style--img">
-            <img class="choose__img" width="517" height="608" src="images/choose/choose-img.png" alt="">
-            <a class="choose__video video" style="background-image: url(images/choose/video.jpg);" data-fancybox="data-fancybox" href="https://youtu.be/8RbG8VOB288?si=IdZTuUAP2Hukrkxx">
-              <span class="sr-only">Video</span>
-            </a>
+          <div class="style-img">
+            <img class="choose__img" src="images/choose/choose-img.png" width="517" height="608" alt="">
+            <div class="video choose__video">
+              <a class="video__link" style="background-image: url(images/choose/video.jpg);" data-fancybox="data-fancybox" href="https://youtu.be/8RbG8VOB288?si=IdZTuUAP2Hukrkxx">
+                <span class="sr-only">Video</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -265,16 +276,28 @@
 
     <section class="start">
       <div class="container">
+
         <div class="start__top">
           <h2 class="title">how to get started</h2>
           <span class="subtitle">Bringing Your Virtual Reality Dreams to Life</span>
         </div>
-        <a class="start__video" style="background-image: url(images/start/video.jpg);" data-fancybox="data-fancybox" href="https://youtu.be/8RbG8VOB288?si=IdZTuUAP2Hukrkxx">
-          <span class="section-name">VR Service</span>
-          <h3 class="start__video-title">How to get started</h3>
-          <span class="sr-only">Video</span>
+
+        <div class="start__wrapper">
+          <a class="start__video" style="background-image: url(images/start/video.jpg);" data-fancybox="data-fancybox" href="https://youtu.be/8RbG8VOB288?si=IdZTuUAP2Hukrkxx"><span class="sr-only">Video</span></a>
+          <div class="start__info">
+            <span class="section-name">VR Service</span>
+            <h3 class="start__video-title">How to get started</h3>
+          </div>
+          <div class="start__bottom">
+            <span class="start__play"></span>
+            <span class="start__line"></span>
+          </div>
+        </div>
+
+        <a class="start__btn btn--color" href="#">
+          <span>get started</span>
         </a>
-        <a class="start__btn btn--color" href="#">get started</a>
+
       </div>
     </section>
 
@@ -289,41 +312,45 @@
         </div>
 
         <div class="price__inner">
+
           <ul class="price__list">
             <li class="price__item">
-              <h3 class="price__title">Customizable Packages</h3>
-              <div class="price__text">
+              <h3 class="price__item-title">Customizable Packages</h3>
+              <div class="price__item-text">
                 <p>
                   We understand that each project is unique, so we offer customizable packages to ensure that you get the services you need at a price that works for you. Our team will work with you to create a package that meets your specific goals and budget.
                 </p>
               </div>
             </li>
             <li class="price__item">
-              <h3 class="price__title">Flexible Payment Options</h3>
-              <div class="price__text">
+              <h3 class="price__item-title">Flexible Payment Options</h3>
+              <div class="price__item-text">
                 <p>
                   We offer flexible payment options to make it easy for you to get started with our services. We accept various payment methods, including credit cards, bank transfers, and PayPal, and we can also work with you to create a payment plan that suits your needs.
                 </p>
               </div>
             </li>
             <li class="price__item">
-              <h3 class="price__title">Satisfaction Guarantee</h3>
-              <div class="price__text">
+              <h3 class="price__item-title">Satisfaction Guarantee</h3>
+              <div class="price__item-text">
                 <p>
                   We stand behind our services and are committed to ensuring that you are completely satisfied with the final product. If for any reason you are not happy with our services, we will work with you to make it right or provide a full refund.
                 </p>
               </div>
             </li>
           </ul>
+
           <img class="price__img" src="images/price/price-img.png" width="324" height="468" alt="">
 
           <div class="price__box">
             <span class="price__from">Start from</span>
             <span class="price__num">$99</span>
-            <a class="price__btn btn--color" href="#">get started</a>
+            <a class="price__btn btn--color" href="#">
+              <span>get started</span>
+            </a>
             <span class="price__guarantee">30 Days Moneyback Guarantee</span>
           </div>
-          
+
         </div>
 
       </div>
@@ -432,7 +459,7 @@
             <ul class="articles__recent-list" data-simplebar>
               <li class="articles__recent-item">
                 <article class="articles__recent-box">
-                  <img class="articles__recent-img" width="142" height="91" src="images/articles/recent/1.jpg" alt="">
+                  <img class="articles__recent-img" src="images/articles/recent/1.jpg" width="142" height="91" alt="">
                   <div class="articles__recent-content">
                     <span class="section-name">VR Education</span>
                     <h3 class="articles__recent-title">The Future of Education: How VR is Revolutionizing the Classroom</h3>
@@ -442,7 +469,7 @@
               </li>
               <li class="articles__recent-item">
                 <article class="articles__recent-box">
-                  <img class="articles__recent-img" width="142" height="91" src="images/articles/recent/2.jpg" alt="">
+                  <img class="articles__recent-img" src="images/articles/recent/2.jpg" width="142" height="91" alt="">
                   <div class="articles__recent-content">
                     <span class="section-name">VR Architecture</span>
                     <h3 class="articles__recent-title">Bringing Designs to Life: How VR is Changing Architecture</h3>
@@ -452,7 +479,7 @@
               </li>
               <li class="articles__recent-item">
                 <article class="articles__recent-box">
-                  <img class="articles__recent-img" width="142" height="91" src="images/articles/recent/3.jpg" alt="">
+                  <img class="articles__recent-img" src="images/articles/recent/3.jpg" width="142" height="91" alt="">
                   <div class="articles__recent-content">
                     <span class="section-name">VR Entertainment</span>
                     <h3 class="articles__recent-title">Making Events Memorable: The Power of VR for Corporate and </h3>
@@ -462,7 +489,7 @@
               </li>
               <li class="articles__recent-item">
                 <article class="articles__recent-box">
-                  <img class="articles__recent-img" width="142" height="91" src="images/articles/recent/4.jpg" alt="">
+                  <img class="articles__recent-img" src="images/articles/recent/4.jpg" width="142" height="91" alt="">
                   <div class="articles__recent-content">
                     <span class="section-name">VR Event</span>
                     <h3 class="articles__recent-title">Exploring New Worlds: The Benefits of VR Travel</h3>
@@ -472,7 +499,7 @@
               </li>
               <li class="articles__recent-item">
                 <article class="articles__recent-box">
-                  <img class="articles__recent-img" width="142" height="91" src="images/articles/recent/1.jpg" alt="">
+                  <img class="articles__recent-img" src="images/articles/recent/1.jpg" width="142" height="91" alt="">
                   <div class="articles__recent-content">
                     <span class="section-name">VR Education</span>
                     <h3 class="articles__recent-title">The Future of Education: How VR is Revolutionizing the Classroom</h3>
@@ -482,7 +509,7 @@
               </li>
               <li class="articles__recent-item">
                 <article class="articles__recent-box">
-                  <img class="articles__recent-img" width="142" height="91" src="images/articles/recent/2.jpg" alt="">
+                  <img class="articles__recent-img" src="images/articles/recent/2.jpg" width="142" height="91" alt="">
                   <div class="articles__recent-content">
                     <span class="section-name">VR Architecture</span>
                     <h3 class="articles__recent-title">Bringing Designs to Life: How VR is Changing Architecture</h3>
@@ -518,16 +545,24 @@
           </a>
           <ul class="social">
             <li class="social__item">
-              <img class="social__img" src="images/social/twitter.svg" width="46" height="46" alt="">
+              <a class="social__link" target="_blank" href="#">
+                <img class="social__img" src="images/social/twitter.svg" width="46" height="46" alt="">
+              </a>
             </li>
             <li class="social__item">
-              <img class="social__img" src="images/social/facebook.svg" width="46" height="46" alt="">
+              <a class="social__link" target="_blank" href="#">
+                <img class="social__img" src="images/social/facebook.svg" width="46" height="46" alt="">
+              </a>
             </li>
             <li class="social__item">
-              <img class="social__img" src="images/social/instagram.svg" width="46" height="46" alt="">
+              <a class="social__link" target="_blank" href="#">
+                <img class="social__img" src="images/social/instagram.svg" width="46" height="46" alt="">
+              </a>
             </li>
             <li class="social__item">
-              <img class="social__img" src="images/social/github.svg" width="46" height="46" alt="">
+              <a class="social__link" target="_blank" href="#">
+                <img class="social__img" src="images/social/github.svg" width="46" height="46" alt="">
+              </a>
             </li>
           </ul>
         </li>
