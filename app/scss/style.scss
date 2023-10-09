@@ -244,7 +244,7 @@
     }
 
     .style-img {
-        margin-right: 80px;
+        margin-left: 20px;
     }
 
     &__video {
@@ -1227,6 +1227,27 @@
 }
 
 
+@media(max-width: 1100px) {
+
+    .about {
+
+        &__content {
+            max-width: 450px;
+        }
+
+    }
+
+    .choose {
+       
+        &__content {
+            max-width: 450px;
+        }
+
+    }
+
+}
+
+
 @media(max-width: 992px) {
 
     .benefits {
@@ -1234,6 +1255,22 @@
 
         &__item {
             padding-top: 90px;
+        }
+
+    }
+
+    .about {
+
+        &__inner {
+            flex-direction: column;
+        }
+
+        .style-img {
+            margin-bottom: 80px;
+        }
+
+        &__content {
+            max-width: 100%;
         }
 
     }
@@ -1254,6 +1291,23 @@
                 margin-top: 0;
             }
 
+        }
+
+    }
+
+    .choose {
+
+        &__inner {
+            flex-direction: column;
+        }
+
+        &__content {
+            max-width: 100%;
+            margin-bottom: 80px;
+        }
+
+        &__video {
+            right: 0;
         }
 
     }
