@@ -167,3 +167,10 @@ body {
     border-radius: 16px;
     margin-bottom: 12px;
 }
+
+@media(max-width: 768px) {
+
+    .section-name {
+        margin-bottom: 0;
+    }
+}

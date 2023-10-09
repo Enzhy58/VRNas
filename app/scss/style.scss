@@ -603,6 +603,7 @@
         @include background-feature ();
         width: 16px;
         height: 16px;
+        margin-right: 10px;
     }
 
     &__line {
@@ -624,7 +625,7 @@
         &::after {
             width: 10%;
             height: 100%;
-            background-color: rgba($white,.5);
+            background-color: rgba($white, .5);
             border-radius: 4px;
         }
 
@@ -673,13 +674,14 @@
     &__list {
         padding: 55px 118px 55px 42px;
         max-width: 758px;
+        margin-right: 50px;
         position: relative;
 
         &::before {
             content: '';
             position: absolute;
             width: 1px;
-            height: 447px;
+            height: 80%;
             top: 50%;
             right: 0;
             transform: translateY(-50%);
@@ -727,7 +729,8 @@
     &__box {
         position: absolute;
         bottom: -5%;
-        right: 15%;
+        right: 10%;
+        text-align: center;
         padding: 20px 70px;
         @include border-linear ();
         background-color: $black-80;
@@ -1250,6 +1253,36 @@
 
     }
 
+    .price {
+
+        &__inner {
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        &__list {
+            max-width: 100%;
+            margin: 0 0 50px 0;
+            padding: 60px;
+
+            &::before {
+                width: 80%;
+                height: 1px;
+                top: auto;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+        }
+
+        &__box {
+            right: auto;
+            left: 5%;
+        }
+
+    }
+
 }
 
 
@@ -1281,7 +1314,43 @@
         }
 
     }
-    
+
+    .start {
+
+        &__video {
+            height: 370px;
+
+            &::before {
+                width: 80px;
+                height: 80px;
+            }
+
+            &:hover::before {
+                width: 100px;
+                height: 100px;
+            }
+
+        }
+
+        &__info {
+            padding-top: 21px;
+            padding-left: 10px;
+        }
+
+        &__video-title {
+            font-size: 20px;
+        }
+
+    }
+
+    .price {
+
+        &__list {
+            padding: 20px;
+        }
+
+    }
+
 }
 
 @media(max-width: 576px) {
@@ -1298,5 +1367,32 @@
         }
 
     }
-    
+
+    .start {
+
+        &__video {
+            height: 260px;
+        }
+
+        &__bottom {
+            padding: 15px;
+        }
+
+    }
+
+}
+
+
+@media(max-width: 480px) {
+
+    .price {
+
+        &__box {
+            right: 0;
+            left: 0;
+            padding: 10px 20px;
+        }
+
+    }
+
 }
