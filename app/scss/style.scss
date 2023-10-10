@@ -810,12 +810,12 @@
 
         &:nth-child(1) {
             top: 60%;
-            left: 3%;
+            left: 2%;
         }
 
         &:nth-child(7) {
             top: 60%;
-            right: 3%;
+            right: 2%;
         }
 
         &:nth-child(2) {
@@ -868,14 +868,16 @@
     }
 
     &__title {
+        position: relative;
         font-size: 28px;
         font-weight: 600;
-        margin-bottom: 32px;
+        margin: 32px 0;
     }
 
     &__link {
         @include border-linear ();
-        width: 50px;
+        max-width: 50px;
+        width: 100%;
         height: 50px;
         background-color: rgba($white, 0.06);
         position: relative;
@@ -899,9 +901,9 @@
     }
 
     &__popular {
-        max-width: 636px;
-        width: 100%;
+        width: calc(100% - 605px);
         z-index: 2;
+        margin-right: 20px;
         position: relative;
 
         &::before {
@@ -970,17 +972,25 @@
     }
 
     &__recent {
-        position: absolute;
+        max-width: 590px;
         width: 100%;
-        right: -50%;
-        @include block ();
-        padding: 32px 97px;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 600%;
+            height: 100%;
+            left: -80px;
+            @include block ();
+
+        }
 
         &-list {
-            max-width: 590px;
             max-height: 504px;
             overflow-y: auto;
             padding-right: 46px;
+            margin-bottom: 20px;
         }
 
         &-item {
@@ -1010,6 +1020,12 @@
         &-title {
             font-size: 18px;
             font-weight: 400;
+        }
+
+        .articles__link {
+            max-width: 40px;
+            width: 100%;
+            height: 40px;
         }
 
         .simplebar-track.simplebar-vertical {
@@ -1369,6 +1385,28 @@
 
     }
 
+    .articles {
+
+        &__bottom {
+            flex-direction: column;
+        }
+
+        &__popular {
+            width: 100%;
+            margin-bottom: 50px;
+        }
+
+        &__recent {
+            padding-left: 30px;
+
+            &::before {
+                left: 0;
+            }
+
+        }
+
+    }
+
     .subscribe {
         padding: 20px 40px;
         flex-direction: column;
@@ -1385,6 +1423,7 @@
     }
 
     .footer {
+        padding-top: 50px;
 
         &__top {
             flex-wrap: wrap;
@@ -1414,6 +1453,11 @@
 
 @media(max-width: 768px) {
 
+    .top,
+    .start {
+        margin-bottom: 80px;
+    }
+
     .top {
 
         &__title {
@@ -1425,6 +1469,7 @@
         &__btn {
             margin-bottom: 32px;
         }
+
     }
 
     .benefits {
@@ -1490,6 +1535,14 @@
 
     }
 
+    .articles {
+
+        &__bottom {
+            margin-bottom: 100px;
+        }
+
+    }
+
 }
 
 @media(max-width: 576px) {
@@ -1527,6 +1580,63 @@
 
     }
 
+    .articles {
+
+        &__top {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &__popular {
+
+            &-slide {
+                height: 266px;
+                padding: 10px;
+            }
+
+            &-title {
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 30px;
+            }
+
+        }
+
+        .slick-dots {
+            bottom: -15%;
+        }
+
+        &__recent {
+            padding-left: 15px;
+
+            &-item {
+
+                &:not(:last-child) {
+                    padding-bottom: 20px;
+                    margin-bottom: 20px;
+                }
+
+            }
+
+            &-img {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            &-box {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            &-title {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+        }
+
+    }
+
 }
 
 
@@ -1538,6 +1648,19 @@
             right: 0;
             left: 0;
             padding: 10px 20px;
+        }
+
+    }
+
+    .articles {
+
+        &__recent {
+
+            &-title {
+                font-size: 14px;
+                line-height: 1.8;
+            }
+
         }
 
     }
