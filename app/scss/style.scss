@@ -1250,6 +1250,27 @@
 
 @media(max-width: 992px) {
 
+    .top {
+
+        &__inner {
+            display: block;
+        }
+
+        &__wrapper {
+            flex-direction: column;
+        }
+
+        .clients {
+            margin-bottom: 40px;
+        }
+
+        &__img {
+            margin-left: auto;
+            margin-right: -80px;
+        }
+
+    }
+
     .benefits {
         padding: 30px;
 
@@ -1387,6 +1408,19 @@
 
 @media(max-width: 768px) {
 
+    .top {
+
+        &__title {
+            font-size: 48px;
+            line-height: 58px;
+            margin-bottom: 0;
+        }
+
+        &__btn {
+            margin-bottom: 32px;
+        }
+    }
+
     .benefits {
         flex-wrap: wrap;
 
@@ -1453,6 +1487,14 @@
 }
 
 @media(max-width: 576px) {
+
+    .top {
+
+        .video {
+           display: none;
+        }
+        
+    }
 
     .service {
 
