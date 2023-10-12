@@ -11,9 +11,9 @@ $(function () {
     $(window).scroll(function () {
         var target = $(this).scrollTop();
         if (target == 0) {
-          $('.menu').removeClass('menu--scroll');
+          $('.header__wrapper').removeClass('header__wrapper--scroll');
         } else {
-          $('.menu').addClass('menu--scroll');
+          $('.header__wrapper').addClass('header__wrapper--scroll');
         }
     });
     
