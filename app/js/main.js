@@ -7,6 +7,15 @@ $(function () {
     $('.menu__open').on('click', function () {
         $('.wrapper').toggleClass('wrapper__fixed');
     });
+
+    $(window).scroll(function () {
+        var target = $(this).scrollTop();
+        if (target == 0) {
+          $('.menu').removeClass('menu--scroll');
+        } else {
+          $('.menu').addClass('menu--scroll');
+        }
+    });
     
     $('.accordion__header').on('click', function (e) {
         e.preventDefault();

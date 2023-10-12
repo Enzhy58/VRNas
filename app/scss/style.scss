@@ -6,8 +6,6 @@
 
 
 .header {
-    padding: 31px 0;
-    margin-bottom: 13px;
     position: relative;
 
     &::before {
@@ -26,6 +24,18 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 31px 0;
+        position: fixed;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        padding: 12px 10px;
+        transition: background-color 0.3s;
+
+        &--scroll {
+            background-color: rgba($black-80, 0.9);
+        }
+
 
         .logo {
             z-index: 11;
@@ -125,6 +135,7 @@
     background-repeat: no-repeat;
     background-position: 0 60%;
     background-size: auto;
+    padding-top: 100px;
     margin-bottom: 144px;
 
     &__inner {
