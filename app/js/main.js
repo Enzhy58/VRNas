@@ -1,4 +1,12 @@
 $(function () {
+
+    $('.menu__open').on('click', function () {
+        $('.menu__inner').toggleClass('menu__inner--active');
+    });
+
+    $('.menu__open').on('click', function () {
+        $('.wrapper').toggleClass('wrapper__fixed');
+    });
     
     $('.accordion__header').on('click', function (e) {
         e.preventDefault();

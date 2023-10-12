@@ -12,6 +12,17 @@ body {
     overflow-x: hidden;
 }
 
+.wrapper {
+
+    &__fixed {
+        position: fixed;
+        overflow-y: hidden;
+        left: 0;
+        right: 0;
+      }
+      
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
