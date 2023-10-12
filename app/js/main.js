@@ -1,10 +1,10 @@
 $(function () {
 
-    $('.menu__open').on('click', function () {
+    $('.menu__burger').on('click', function () {
         $('.menu__inner').toggleClass('menu__inner--active');
     });
 
-    $('.menu__open').on('click', function () {
+    $('.menu__burger').on('click', function () {
         $('.wrapper').toggleClass('wrapper__fixed');
     });
 

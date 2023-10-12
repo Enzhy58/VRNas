@@ -20,7 +20,7 @@ body {
         left: 0;
         right: 0;
       }
-      
+
 }
 
 .container {
@@ -170,9 +170,13 @@ body {
         @include light ();
     }
 
+    img {
+        object-fit: contain;
+    }
+
 }
 
-.section-name {
+.tag{
     display: inline-block;
     font-size: 14px;
     font-weight: 500;
@@ -195,7 +199,7 @@ body {
         line-height: 45px;
     }
 
-    .section-name {
+    .tag {
         margin-bottom: 0;
     }
 

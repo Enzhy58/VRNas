@@ -21,16 +21,15 @@
     }
 
     .menu {
+        padding: 12px 10px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 31px 0;
         position: fixed;
         left: 0;
         right: 0;
         z-index: 999;
-        padding: 12px 10px;
-        transition: background-color 0.3s;
+        transition: all 0.3s;
 
         &--scroll {
             background-color: rgba($black-80, 0.9);
@@ -102,7 +101,7 @@
 
         }
 
-        &__open {
+        &__burger {
             display: none;
             @include border-linear ();
             max-width: 40px;
@@ -177,6 +176,10 @@
             @include light ();
         }
 
+    }
+
+    &__img {
+        object-fit: contain;
     }
 
 }
@@ -324,7 +327,7 @@
             left: 0;
             top: 50%;
             transform: translateY(-50%);
-            background-image: url("../images/icons/about.svg");
+            background-image: url("../images/icons/about-mark.svg");
             @include background-feature ();
         }
 
@@ -467,6 +470,7 @@
 
     &__item-btn {
         position: absolute;
+        width: 183px;
         left: 50%;
         bottom: 0;
         transform: translateX(-50%);
@@ -477,7 +481,7 @@
 }
 
 
-.choose {
+.choice {
 
     &__inner {
         display: flex;
@@ -685,7 +689,7 @@
 
     &__btn {
         display: block;
-        width: 182px;
+        width: 183px;
         height: 50px;
         margin: 0 auto;
     }
@@ -806,9 +810,9 @@
     }
 
     &__guarantee {
-        color: $grey-1;
         font-size: 12px;
         line-height: 20px;
+        color: $grey-1;
     }
 
 }
@@ -837,11 +841,6 @@
         width: 100%;
         object-fit: contain;
         margin: 0 auto;
-    }
-
-    &__list {
-        display: flex;
-        justify-content: space-between;
     }
 
     &__item {
@@ -935,7 +934,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-image: url("../images/icons/arlicle-link.svg");
+            background-image: url("../images/icons/btn-arrow.svg");
             @include background-feature ()
         }
 
@@ -1054,6 +1053,7 @@
         }
 
         &-img {
+            object-fit: cover;
             margin-right: 21px;
         }
 
@@ -1121,7 +1121,7 @@
             left: 5%;
             top: 50%;
             transform: translateY(-50%);
-            background-image: url("../images/icons//message-subscribe.svg");
+            background-image: url("../images/icons/message-subscribe.svg");
             @include background-feature ();
         }
 
@@ -1146,11 +1146,11 @@
 
     &__btn {
         position: absolute;
+        width: 50px;
+        height: 50px;
         right: 4px;
         top: 50%;
         transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
         background-color: rgba($white, 0.2);
         transition: all 0.3s;
 
@@ -1254,6 +1254,10 @@
 
     }
 
+    &__img {
+        object-fit: contain;
+    }
+
 }
 
 .contacts {
@@ -1296,20 +1300,9 @@
 
 @media(max-width: 1100px) {
 
-    .about {
-
-        &__content {
-            max-width: 450px;
-        }
-
-    }
-
-    .choose {
-       
-        &__content {
-            max-width: 450px;
-        }
-
+    .about__content,
+    .choice__content {
+        max-width: 450px;
     }
 
 }
@@ -1336,6 +1329,7 @@
                     &:not(:last-child) {
                         margin-right: 24px;
                     }
+
                 }
     
             }
@@ -1411,7 +1405,7 @@
 
     }
 
-    .choose {
+    .choice {
 
         &__inner {
             flex-direction: column;
@@ -1569,7 +1563,7 @@
 
             }
 
-            &__open {
+            &__burger {
                 display: block;
             }
 
@@ -1756,7 +1750,7 @@
                 align-items: flex-start;
             }
 
-            &-title {
+            &-content {
                 margin-right: 0;
                 margin-bottom: 20px;
             }
@@ -1810,12 +1804,12 @@
         padding: 10px;
 
         &__field {
-            width: 100%;
             padding-right: 50px;
 
             &::placeholder {
                 font-size: 14px;
             }
+
         }
 
     }
