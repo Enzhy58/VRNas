@@ -25,12 +25,12 @@
         left: 0;
         right: 0;
         z-index: 999;
-        transition: all 0.3s;
+        transition: all 0.2s;
 
         &--scroll {
             background-color: rgba($black-80, 0.9);
         }
-        
+
     }
 
     .menu {
@@ -97,11 +97,7 @@
             padding: 12px 24px;
             font-weight: 300;
             @include border-linear ();
-
-            &:hover {
-                background: linear-gradient(90deg, $liner-blue, $liner-pink);
-            }
-
+            @include hover--btn ();
         }
 
         &__burger {
@@ -388,9 +384,23 @@
         position: relative;
         transition: all 0.3s;
 
+        &::after,
         &::before {
             content: '';
             position: absolute;
+        }
+
+        &::after {
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            opacity: 0;
+            background: linear-gradient(180deg, rgba(37, 37, 50, 0) 0.66%, rgba(37, 37, 50, 0.91) 53.72%, #252532 100.66%);
+            transition: all 0.3s;
+        }
+
+        &::before {
             width: 48px;
             height: 48px;
             top: 25px;
@@ -426,7 +436,7 @@
             @include border-linear ();
         }
 
-        &:hover .service__item-bottom::before,
+        &:hover::after,
         &:hover .service__item-btn {
             opacity: 1;
         }
@@ -441,23 +451,6 @@
     &__item:nth-child(5) {
         display: inline-block;
         margin-top: 135px;
-    }
-
-    &__item-bottom {
-        position: relative;
-
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            opacity: 0;
-            background: linear-gradient(180deg, rgba(37, 37, 50, 0) 0.66%, rgba(37, 37, 50, 0.91) 53.72%, #252532 100.66%);
-            transition: all 0.3s;
-        }
-
     }
 
     &__item-title {
@@ -475,9 +468,10 @@
         position: absolute;
         width: 183px;
         left: 50%;
-        bottom: 0;
+        bottom: 20%;
         transform: translateX(-50%);
         opacity: 0;
+        z-index: 10;
         transition: all 0.3s;
     }
 
@@ -517,10 +511,11 @@
 
     &__header {
         display: block;
+        width: 100%;
         font-size: 20px;
         font-weight: 500;
+        text-align: left;
         padding-bottom: 12px;
-        margin-bottom: 12px;
         border-bottom: 1px solid rgba($white, 0.35);
         position: relative;
 
@@ -537,24 +532,17 @@
             transition: all 0.3s;
         }
 
-        &--active::before {
-            transform: rotate(180deg);
-        }
-
     }
 
     &__body {
         color: $grey-2;
-        margin-bottom: 48px;
+        margin-bottom: 30px;
     }
 
     &__body {
-        display: none;
-
-        &.accordion__body--active {
-            display: block;
-        }
-
+       overflow: hidden;
+       max-height: 0;
+       transition: all 0.3s;
     }
 
 }
@@ -888,8 +876,8 @@
     }
 
     &__item-img {
-        width: clamp(2.5rem ,1.1363636364rem + 6.8181818182vw ,6.25rem);
-        height: clamp(2.5rem ,1.1363636364rem + 6.8181818182vw ,6.25rem);
+        width: clamp(2.5rem, 1.1363636364rem + 6.8181818182vw, 6.25rem);
+        height: clamp(2.5rem, 1.1363636364rem + 6.8181818182vw, 6.25rem);
     }
 
 }
@@ -927,9 +915,9 @@
         width: 100%;
         height: 50px;
         background-color: rgba($white, 0.06);
-        position: relative;
+        @include hover--btn ();
 
-        &::before {
+        &::after {
             content: '';
             position: absolute;
             width: 17px;
@@ -939,10 +927,6 @@
             transform: translate(-50%, -50%);
             background-image: url("../images/icons/btn-arrow.svg");
             @include background-feature ()
-        }
-
-        &:hover {
-            background: linear-gradient(90deg, $liner-blue, $liner-pink);
         }
 
     }
@@ -1326,15 +1310,15 @@
                 &:not(:last-child) {
                     margin-right: 40px;
                 }
-    
+
                 &--more {
-    
+
                     &:not(:last-child) {
                         margin-right: 24px;
                     }
 
                 }
-    
+
             }
 
         }
@@ -1675,9 +1659,9 @@
     .top {
 
         .video {
-           display: none;
+            margin-bottom: 50px;
         }
-        
+
     }
 
     .service {

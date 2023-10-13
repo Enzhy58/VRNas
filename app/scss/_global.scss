@@ -1,5 +1,5 @@
 html {
-    overflow-x: hidden; 
+    overflow-x: hidden;
 }
 
 body {
@@ -90,10 +90,7 @@ body {
     text-transform: uppercase;
     background-color: $black-80;
     @include border-linear ();
-
-    &:hover {
-        background: linear-gradient(90deg, $liner-blue, $liner-pink);
-    }
+    @include hover--btn ();
 
 }
 
